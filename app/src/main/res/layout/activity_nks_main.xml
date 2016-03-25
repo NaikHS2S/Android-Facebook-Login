@@ -10,12 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".facebook.integration.ui.activity.NksMainActivity">
 
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/login_button"
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:visibility="gone"
-        android:layout_marginBottom="30dp" />
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.content.res.Resources;
 import android.util.Base64;
+import android.util.DisplayMetrics;
 import android.util.Log;
 
 import java.security.MessageDigest;
@@ -34,6 +36,14 @@ public class NksUtil {
         }
         return key;
     }
+
+    public static float convertPixelsToDp(float px, Context context){
+        Resources resources = context.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        float dp = px / ((float)metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+        return dp;
+    }
+
 }
 
 
